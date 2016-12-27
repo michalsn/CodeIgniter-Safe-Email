@@ -1,7 +1,7 @@
 # CodeIgniter Safe Email
 [![Build Status](https://travis-ci.org/michalsn/CodeIgniter-Safe-Email.svg?branch=master)](https://travis-ci.org/michalsn/CodeIgniter-Safe-Email)
 
-How is this working exactly? This class converts all emails on the web page to "special tags", that web scrapers can't read. Most of the web scrapers can't run JavaScript. This class requires special jQuery plugin to convert "special tags" back to email adresses. This is the whole secret.
+How is this working exactly? This class converts all emails on the web page to "special tags", that web scrapers can't read. Most of the web scrapers can't run JavaScript. This class requires special jQuery plugin to convert "special tags" back to email addresses. This is the whole secret.
 
 * Full automation
 * No additional inline javascript
@@ -29,6 +29,11 @@ $(document).ready(function() {
     $.safeEmail();
 });
 ```
+## Configuration options
+
+At this time only available configuration option is identifier for "special tags".
+
+Default value is `ci-safe-email`, but this may be changed in Safe_email class. Just edit `$class_name` variable. If you change it, be aware that you need to initialize `$.safeEmail` call with additional option, like this: `$.safeEmail({className: 'some-new-class-name'})`.
 
 ## Limitations
 
